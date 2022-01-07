@@ -7,11 +7,16 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+        while (true){
+            System.out.println("Input an positive integer to be factored. Enter \"3.14\" to exit");
+            System.out.println("Note: Must be positive. If negative, remove negative and make one factor negative");
+            double a = scan.nextDouble();
+            if (a == 3.14){
+                break;
+            }
+            System.out.println(factor(a));
+        }
 
-        System.out.println("Input an integer to be factored:");
-        System.out.println("Note: Must be positive. If negative, remove negative and make one factor negative");
-        double a = scan.nextDouble();
-        System.out.println(factor(a));
     }
 
     public static String factor(double a){
