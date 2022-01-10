@@ -22,10 +22,8 @@ public class Main {
     public static String factor(double a){
         String thingtoreturn = "";
         for (int i = 1; i < (.5*a); i++) {
-            if (i <= a / i) {
-                if (a % i == 0) {
-                    thingtoreturn += "" + i + ", " + (a / i) + ". Sum: " + (i + (a / i)) + ". Difference: " + ((a / i) - i) + "\n";
-                }
+            if (i <= a / i && a % i == 0) {
+                thingtoreturn += "" + i + ", " + (a / i) + ". Sum: " + (i + (a / i)) + ". Difference: " + ((a / i) - i) + "\n";
             }
         }
         return thingtoreturn;
